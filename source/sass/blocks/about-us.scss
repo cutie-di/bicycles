@@ -2,11 +2,11 @@
   padding: 105px 0 148px;
 
   @media ($tablet-max-width) {
-    padding: 37px 0 52px;
+    padding: 37px 0 69px;
   }
 
   @media ($mobile-max-width) {
-    padding: 41px 0 70px;
+    padding: 39px 0 74px;
   }
 }
 
@@ -18,7 +18,6 @@
     line-height: 41px;
     margin: 31px 0;
   }
-
 }
 
 .about-us__list {
@@ -34,12 +33,12 @@
   @media ($tablet-max-width) {
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 30px;
-    padding: 0 82px;
+    padding: 0 85px;
   }
 
   @media ($mobile-max-width) {
     grid-template-columns: 1fr;
-    gap: 37px;
+    gap: 38px;
     padding: 0;
   }
 }
@@ -77,22 +76,22 @@
       margin-bottom: 7px;
     }
 
-    &:not(:first-child):before {
+    &:not(:first-child)::before {
       margin: 0 auto 6px;
     }
   }
 
-  &:before {
+  &::before {
     display: block;
     font-family: inherit;
     font-weight: 700;
     font-size: 28px;
     line-height: 38px;
-    letter-spacing: -1.27273px;
+    letter-spacing: -1.27px;
     width: 40px;
     height: 40px;
     counter-increment: counter;
-    content: '0'counter(counter);
+    content: "0" counter(counter);
     text-align: center;
     color: $color-decoration;
     background: transparent;

@@ -33,7 +33,7 @@
   @media ($tablet-max-width) {
     min-height: 340px;
     width: 100%;
-    padding: 122px 21px 62px;
+    padding: 122px 21px 61px;
 
     background-color: $color-dark-background;
     background-repeat: no-repeat;
@@ -48,7 +48,7 @@
 
   @media ($mobile-max-width) {
     min-height: 390px;
-    padding: 109px 16px 51px;
+    padding: 109px 16px 50px;
 
     background-position: center;
     background-image: url("../img/backgrounds/intro_mobile.jpg");
@@ -76,7 +76,7 @@
   font-weight: 700;
   font-size: 46px;
   line-height: 64px;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   color: $color-basic-white;
   margin: 20px 0;
 
@@ -93,7 +93,7 @@
   font-weight: 300;
   font-size: 20px;
   line-height: 32px;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   color: $color-basic-white;
   opacity: 0.8;
   margin: 26px 0;
@@ -106,7 +106,6 @@
 
   @media ($mobile-max-width) {
     margin: 18px 0;
-
   }
 }
 

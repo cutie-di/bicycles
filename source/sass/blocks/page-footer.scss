@@ -9,7 +9,6 @@
 
   @media ($mobile-max-width) {
     padding: 36px 0 43px;
-    ;
   }
 }
 
@@ -84,6 +83,7 @@
 
   @media ($tablet-max-width) {
     margin: 21px 0 19px;
+    letter-spacing: -0.01px;
 
     br {
       display: none;

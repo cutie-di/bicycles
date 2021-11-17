@@ -16,7 +16,7 @@
   font-weight: 600;
   font-size: 17px;
   line-height: 28px;
-  letter-spacing: -0.005em;
+  letter-spacing: -0.01em;
   text-align: center;
   color: $color-basic-white;
   margin: 8px 0 18px;
@@ -35,6 +35,10 @@
 .form__content {
   display: grid;
   gap: 18px;
+
+  @media ($mobile-max-width) {
+    gap: 19px;
+  }
 }
 
 .form__content input {
