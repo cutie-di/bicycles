@@ -92,13 +92,12 @@ function onNavToggleClick() {
 onNavToggleClick();
 onNavLinkClick();
 
-
 // form-validation
 
 var form = document.querySelector('.form__content');
 var nameInput = form.querySelector('input[type="text"]');
 var phoneInput = form.querySelector('input[type="tel"]');
-var submitButton = form.querySelector('button[type="submit"]');
+var formButton = form.querySelector('button[type="submit"]');
 
 var nameRegex = /^[A-Za-zА-Яа-яЁё\s]+$/;
 var phoneRegex = /^((\+7|7|8)+([0-9]){10})$/;
@@ -200,6 +199,14 @@ phoneInput.addEventListener('keypress', function (evt) {
 
 phoneInput.addEventListener('input', createPhoneMask);
 
+nameInput.addEventListener('input', function (evt) {
+  checkNameField(nameRegex, evt.target);
+});
+
+phoneInput.addEventListener('input', function (evt) {
+  checkPhoneField(phoneRegex, evt.target);
+});
+
 // localStorage
 
 var storageName = '';
@@ -242,27 +249,6 @@ function fillForm() {
 
 fillForm();
 
-// nameInput.addEventListener('input', function (evt) {
-//  checkNameField(nameRegex, evt.target);
-// });
-
-// phoneInput.addEventListener('input', function (evt) {
-//  checkPhoneField(phoneRegex, evt.target);
-// });
-
-function onButtonClick() {
-  submitButton.addEventListener('click', function () {
-    checkNameField(nameRegex, nameInput);
-    checkPhoneField(phoneRegex, phoneInput);
-  });
-}
-
-form.addEventListener('submit', function (evt) {
-
-  if (onButtonClick() === false) {
-    evt.preventDefault();
-  } else {
-    saveFormData();
-    // evt.target.submit();
-  }
+formButton.addEventListener('click', function () {
+  saveFormData();
 });

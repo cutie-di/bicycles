@@ -1,14 +1,15 @@
 .page-footer__wrapper {
   max-width: $max-width;
-  padding: 120px calc(50% - 479px) 85px;
-  margin: 0 auto;
+  padding: 30px calc(50% - 479px) 85px;
+  margin: 92px auto 0;
 
   @media ($tablet-max-width) {
-    padding: 37px 5% 43px;
+    padding: 15px 5% 43px;
+    margin-top: 21px;
   }
 
   @media ($mobile-max-width) {
-    padding: 36px 0 43px;
+    padding: 15px 0 43px;
   }
 }
 
@@ -102,7 +103,7 @@
 
   list-style: none;
   padding: 0;
-  margin: 29px auto 0;
+  margin: 27px auto 0;
 
   @media ($tablet-max-width) {
     margin-top: 11px;
@@ -118,7 +119,7 @@
 
 .page-footer__item {
   display: block;
-  margin: 0 40px 0 36px;
+  margin: 0 44px 0 36px;
 
   @media ($mobile-max-width) {
     margin: 0 auto;
