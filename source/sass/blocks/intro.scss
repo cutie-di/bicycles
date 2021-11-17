@@ -59,19 +59,18 @@
   }
 }
 
-
-.intro__logo {
+.intro__content a {
   @media ($tablet-max-width) {
     display: none;
   }
 }
 
-.intro__logo img {
+.intro__content img {
   width: 68px;
   height: 21px;
 }
 
-.intro__title {
+.intro__content h2 {
   font-family: inherit;
   font-weight: 700;
   font-size: 46px;
@@ -87,7 +86,7 @@
   }
 }
 
-.intro__text {
+.intro__content p {
   display: block;
   font-family: inherit;
   font-weight: 300;

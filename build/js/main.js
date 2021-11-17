@@ -190,7 +190,6 @@ phoneInput.addEventListener('keypress', function (evt) {
   if (!/\d/.test(evt.key)) {
     evt.preventDefault();
     showError(phoneInput);
-    phoneInput.setCustomValidity('Пожалуйста, начните вводить цифры');
   } else {
     phoneInput.setCustomValidity('');
     showError(phoneInput);

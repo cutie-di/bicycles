@@ -10,7 +10,14 @@
   }
 }
 
-.about-us__title {
+.about-us__wrapper h2 {
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: $color-title-black;
   margin: 47px 0;
 
   @media ($tablet-max-width) {
@@ -44,33 +51,26 @@
 }
 
 .about-us__item {
+  display: block;
   font-family: inherit;
   font-weight: 400;
   font-size: 22px;
   line-height: 34px;
   text-align: center;
+  letter-spacing: -0.5px;
   color: $color-basic-black;
-
-  br {
-    display: none;
-  }
 
   @media ($tablet-max-width) {
     font-size: 22px;
     letter-spacing: -0.02em;
 
     br {
-      display: block;
+      display: none;
     }
   }
 
   @media ($mobile-max-width) {
     font-size: 18px;
-
-
-    br {
-      display: none;
-    }
 
     &:not(:first-child) {
       margin-bottom: 7px;
@@ -91,7 +91,7 @@
     width: 40px;
     height: 40px;
     counter-increment: counter;
-    content: "0" counter(counter);
+    content: "0"counter(counter);
     text-align: center;
     color: $color-decoration;
     background: transparent;

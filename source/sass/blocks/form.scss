@@ -10,7 +10,7 @@
   }
 }
 
-.form__title {
+.form__wrapper h3 {
   display: block;
   font-family: inherit;
   font-weight: 600;
@@ -90,9 +90,22 @@
   }
 }
 
-.form__button {
+.form__content button {
   position: relative;
+  display: block;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
   z-index: 1;
+  color: $color-basic-black;
+  background-color: $color-decoration;
+  padding: 16px 0;
 
   &::before {
     background: $color-nav-link;
@@ -123,5 +136,9 @@
 
   @media ($tablet-max-width) {
     width: 100%;
+  }
+
+  @media ($mobile-max-width) {
+    margin: 0 auto;
   }
 }
