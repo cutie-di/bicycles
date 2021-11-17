@@ -49,3 +49,21 @@
 .display-none {
   display: none;
 }
+
+@keyframes down {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  50% {
+    transform: translateY(-50%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.main-nav__animation-down {
+  animation: down 0.5s;
+}

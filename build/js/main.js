@@ -37,8 +37,10 @@ var overlay = navMain.querySelector('.overlay');
 
 function hideMenu() {
   navToggle.setAttribute('aria-label', 'Открыть меню');
+  navToggle.classList.add('main-nav__animation-up');
   navMain.classList.add('main-nav--closed');
   navMain.classList.remove('main-nav--opened');
+
   overlay.classList.remove('overlay--show');
 }
 
@@ -70,6 +72,7 @@ function showMenu() {
   navToggle.setAttribute('aria-label', 'Закрыть меню');
   navMain.classList.remove('main-nav--closed');
   navMain.classList.add('main-nav--opened');
+  navToggle.classList.add('main-nav__animation-down');
   overlay.classList.add('overlay--show');
 
   document.addEventListener('click', closeOnOverlay);
@@ -257,11 +260,11 @@ function onButtonClick() {
 }
 
 form.addEventListener('submit', function (evt) {
-  evt.preventDefault();
 
-
-  if (onButtonClick() === true) {
+  if (onButtonClick() === false) {
+    evt.preventDefault();
+  } else {
     saveFormData();
-    evt.target.submit();
+    // evt.target.submit();
   }
 });

@@ -20,11 +20,13 @@
 <body class="page-body">
 
   <header class="page-header">
+    <!-- main-nav--opened main-nav--closed main-nav--nojs-->
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <div class="main-nav__wrapper">
         <a class="main-nav__logo" href="#">
           <img src="img/logo/main-logo.svg" width="68" height="21" alt="Логотип «Bicycles»">
         </a>
+        <!-- main-nav__animation-down, main-nav__animation-up -->
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню">
         </button>
         <div class="main-nav__list-wrapper">
@@ -50,6 +52,7 @@
               </a>
             </li>
           </ul>
+          <!--overlay--show-->
           <div class="overlay"></div>
         </div>
       </div>
@@ -79,8 +82,10 @@
             <h3 class="form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</h3>
             <form class="form__content" method="post" action="https://echo.htmlacademy.ru">
               <label class="visually-hidden" for="form-name">Введите Ваше Имя</label>
+              <!-- form__input-error -->
               <input type="text" id="form-name" name="user-name" placeholder="Введите Ваше Имя" autocomplete="off" required="">
               <label class="visually-hidden" for="form-tel">Введите Ваш номер телефона</label>
+              <!-- form__input-error -->
               <input placeholder="Введите Ваш номер телефона" type="tel" id="form-tel" name="user-tel" minlength="10" maxlength="17" autocomplete="off" required="">
               <button class="form__button button" type="submit" aria-label="Отправить контактные данные и подобрать велосипед мечты">
                 Подобрать велосипед мечты
@@ -182,7 +187,7 @@
             <!--1х: 503px/282px; 2x: 1006px/564px-->
             <source media="(max-width: 1023px)" srcset="img/video_tablet.jpg 1x, img/video_tablet@2x.jpg 2x">
             <!--1х: 929px/522px; 2x: 1858px/1044px-->
-            <img src="img/video_desktop.jpg" srcset="img/video_desktop@2x.jpg 2x" width="929" height="522" alt="Изображение черного спортивного велосипеда">
+            <img src="img/video_desktop.jpg" srcset="img/video_desktop@2x.jpg 2x" width="929" height="522" alt="Изображение черного спортивного велосипеда" loading="lazy">
           </picture>
           <button aria-label="Кнопка «Воспроизвести»">
           </button>

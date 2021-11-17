@@ -36,9 +36,9 @@ var navToggle = navMain.querySelector('.main-nav__toggle');
 var overlay = navMain.querySelector('.overlay');
 
 function hideMenu() {
-  navToggle.setAttribute('aria-label', 'Открыть меню');
-  navMain.classList.add('main-nav--closed');
+  navToggle.setAttribute('aria-label', 'Закрыть меню');
   navMain.classList.remove('main-nav--opened');
+  navMain.classList.add('main-nav--closed');
   overlay.classList.remove('overlay--show');
 }
 
@@ -67,9 +67,10 @@ function closeOnEsc(evt) {
 }
 
 function showMenu() {
-  navToggle.setAttribute('aria-label', 'Закрыть меню');
+  navToggle.setAttribute('aria-label', 'Открыть меню');
   navMain.classList.remove('main-nav--closed');
   navMain.classList.add('main-nav--opened');
+  navToggle.classList.add('main-nav__animation-down');
   overlay.classList.add('overlay--show');
 
   document.addEventListener('click', closeOnOverlay);
