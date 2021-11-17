@@ -1,0 +1,7 @@
+.page-header {
+  background-color: $color-dark-background;
+
+  @media ($tablet-max-width) {
+    background: none;
+  }
+}

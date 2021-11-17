@@ -1,0 +1,123 @@
+.form__wrapper {
+  @media ($tablet-max-width) {
+    padding: 0 202px;
+  }
+
+  @media ($mobile-max-width) {
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.form__title {
+  display: block;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  letter-spacing: -0.005em;
+  text-align: center;
+  color: $color-basic-white;
+  margin: 8px 0 18px;
+
+  @media ($tablet-max-width) {
+    font-size: 18px;
+    color: $color-basic-black;
+    margin: 0 0 29px;
+  }
+
+  @media ($mobile-max-width) {
+    margin: 0 0 20px;
+  }
+}
+
+.form__content {
+  display: grid;
+  gap: 18px;
+}
+
+.form__content input {
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 24px;
+  border: 1px solid $color-input-border;
+  border-radius: 6px;
+  color: $color-basic-black;
+  padding: 12px 26px;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-decoration;
+    outline: 2px solid $color-decoration;
+  }
+
+  @media ($tablet-max-width) {
+    padding: 12px 20px;
+    letter-spacing: 0.01em;
+  }
+
+  @media ($mobile-max-width) {
+    padding: 11px 23px;
+  }
+}
+
+.form__input-error {
+  border: 1px solid $color-input-error-border;
+  background-color: $color-input-error-bg;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $color-input-error-border;
+    outline: 2px solid $color-input-error-border;
+  }
+}
+
+.form__content input::placeholder {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  color: $color-placeholder-opacity-05;
+
+  @media ($tablet-max-width) {
+    letter-spacing: 0.01em;
+  }
+}
+
+.form__button {
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    background: $color-nav-link;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0%;
+    height: 100%;
+    border-radius: 6px;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-decoration;
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+
+  @media ($tablet-max-width) {
+    width: 100%;
+  }
+}
