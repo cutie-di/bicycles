@@ -1,17 +1,27 @@
 .intro {
-  background-color: $color-dark-background;
-  background-repeat: no-repeat;
-  background-image: url("../img/backgrounds/intro_desktop.jpg");
-  background-position: center top;
-  background-size: cover;
-  margin-top: -63px;
+  position: relative;
 
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/backgrounds/intro_desktop@2x.jpg");
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background-color: $color-dark-background;
   }
 
   @media ($tablet-max-width) {
-    background: none;
+    margin-top: -57px;
+
+    &::before {
+      display: none;
+    }
+
+    @media ($mobile-max-width) {
+      margin-top: -58px;
+    }
   }
 }
 
@@ -19,7 +29,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 317px calc(50% - 440px) 212px;
+  padding: 254px calc(50% - 440px) 212px;
 
   @media ($tablet-max-width) {
     flex-direction: column;
@@ -31,15 +41,14 @@
   width: 45%;
 
   @media ($tablet-max-width) {
-    min-height: 340px;
     width: 100%;
-    padding: 122px 21px 61px;
-
+    min-height: 347px;
     background-color: $color-dark-background;
+    background-image: url("../img/backgrounds/intro_tablet.jpg");
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
-    background-image: url("../img/backgrounds/intro_tablet.jpg");
+    padding: 122px 15px 51px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/backgrounds/intro_tablet@2x.jpg");
@@ -48,10 +57,8 @@
 
   @media ($mobile-max-width) {
     min-height: 390px;
-    padding: 109px 16px 50px;
-
-    background-position: center;
     background-image: url("../img/backgrounds/intro_mobile.jpg");
+    padding: 109px 15px 51px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/backgrounds/intro_mobile@2x.jpg");
@@ -100,7 +107,7 @@
   @media ($tablet-max-width) {
     font-size: 18px;
     text-align: center;
-    margin: 18px 130px;
+    margin: 18px 145px;
   }
 
   @media ($mobile-max-width) {

@@ -40,6 +40,7 @@ function hideMenu() {
   navMain.classList.remove('main-nav--opened');
   navMain.classList.add('main-nav--closed');
   overlay.classList.remove('overlay--show');
+  document.body.classList.remove('page-no-scroll');
 }
 
 function onNavLinkClick() {
@@ -72,6 +73,7 @@ function showMenu() {
   navMain.classList.add('main-nav--opened');
   navToggle.classList.add('main-nav__animation-down');
   overlay.classList.add('overlay--show');
+  document.body.classList.add('page-no-scroll');
 
   document.addEventListener('click', closeOnOverlay);
   document.addEventListener('keydown', closeOnEsc);
@@ -237,12 +239,12 @@ function fillForm() {
     phoneInput.value = storageTel;
   } else if (storageName) {
     nameInput.value = storageName;
-    phoneInput.focus();
-  } else if (storageTel) {
-    phoneInput.value = storageTel;
-    nameInput.focus();
+    // phoneInput.focus();
   } else {
-    nameInput.focus();
+    phoneInput.value = storageTel;
+    // nameInput.focus();
+  // } else {
+  //  nameInput.focus();
   }
 }
 

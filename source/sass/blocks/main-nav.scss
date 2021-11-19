@@ -15,9 +15,9 @@
   display: none;
 
   @media ($tablet-max-width) {
-    position: relative;
+    position: absolute;
     display: block;
-    max-width: 25%;
+    max-width: 30%;
     z-index: 100;
     padding-top: 23px;
     padding-left: 21px;
@@ -25,15 +25,6 @@
 
   @media ($mobile-max-width) {
     padding-left: 16px;
-  }
-
-  &:hover,
-  &:focus {
-    opacity: 0.7;
-  }
-
-  &:active {
-    opacity: 0.4;
   }
 }
 
@@ -47,7 +38,7 @@
 
   @media ($tablet-max-width) {
     display: block;
-    position: absolute;
+    position: relative;
     top: 0;
     right: 0;
     z-index: 12;
@@ -56,17 +47,18 @@
     border: none;
     background-color: $color-decoration;
     padding: 25px;
+    margin-left: auto;
   }
 }
 
 .main-nav__list {
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
   justify-content: space-between;
   list-style: none;
   padding: 0;
-  margin: 0 178px;
+  margin: 12px 176px 0;
 
   &::after {
     position: absolute;
@@ -83,7 +75,7 @@
     width: 100%;
     z-index: 10;
     margin: 0;
-    padding-top: 1px;
+    background-color: $color-basic-white;
 
     &::after {
       display: none;
@@ -96,9 +88,11 @@
 
   @media ($tablet-max-width) {
     position: relative;
+    margin: 0;
+
 
     &:first-child {
-      margin-top: 100px;
+      margin-top: 50px;
     }
 
     &:not(:last-child) {
@@ -115,7 +109,8 @@
   line-height: 32px;
   text-decoration: none;
   color: $color-basic-white;
-  padding: 21px 15px 9px;
+  padding: 9px 15px;
+
 
   &:hover,
   &:focus {
@@ -190,6 +185,11 @@
   .main-nav--nojs .main-nav__item {
     display: block;
   }
+}
+
+.main-nav--opened {
+  height: 100vh;
+  overflow: auto;
 }
 
 .main-nav--opened .main-nav__logo {
