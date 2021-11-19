@@ -239,12 +239,8 @@ function fillForm() {
     phoneInput.value = storageTel;
   } else if (storageName) {
     nameInput.value = storageName;
-    // phoneInput.focus();
   } else {
     phoneInput.value = storageTel;
-    // nameInput.focus();
-  // } else {
-  //  nameInput.focus();
   }
 }
 

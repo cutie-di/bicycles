@@ -177,6 +177,10 @@
     display: none;
   }
 
+  .main-nav--nojs .main-nav__logo {
+    position: relative;
+  }
+
   .main-nav--nojs .main-nav__wrapper {
     position: static;
     min-height: 684px;
