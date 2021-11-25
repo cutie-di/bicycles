@@ -1,27 +1,12 @@
 .intro {
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2;
-    background-color: $color-dark-background;
-  }
+  background-color: $color-dark-background;
+  background-image: url("../img/backgrounds/intro_desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
 
   @media ($tablet-max-width) {
-    margin-top: -57px;
-
-    &::before {
-      display: none;
-    }
-
-    @media ($mobile-max-width) {
-      margin-top: -58px;
-    }
+    background: none;
   }
 }
 
@@ -29,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 254px calc(50% - 440px) 212px;
+  padding: 316px calc(50% - 440px) 212px;
 
   @media ($tablet-max-width) {
     flex-direction: column;
@@ -42,13 +27,12 @@
 
   @media ($tablet-max-width) {
     width: 100%;
-    min-height: 347px;
+    padding: 115px 0 60px;
     background-color: $color-dark-background;
     background-image: url("../img/backgrounds/intro_tablet.jpg");
     background-repeat: no-repeat;
-    background-position: center top;
+    background-position: center;
     background-size: cover;
-    padding: 122px 15px 51px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/backgrounds/intro_tablet@2x.jpg");
@@ -56,9 +40,8 @@
   }
 
   @media ($mobile-max-width) {
-    min-height: 390px;
     background-image: url("../img/backgrounds/intro_mobile.jpg");
-    padding: 109px 15px 51px;
+    padding: 102px 15px 51px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/backgrounds/intro_mobile@2x.jpg");
@@ -90,6 +73,10 @@
     font-size: 30px;
     line-height: 42px;
     text-align: center;
+  }
+
+  @media ($mobile-max-width) {
+    margin: 20px 0 18px;
   }
 }
 

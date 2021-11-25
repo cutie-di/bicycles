@@ -31,15 +31,14 @@ smoothAnchorScroll();
 // burger-menu
 
 var navMain = document.querySelector('.main-nav');
-var navLink = navMain.querySelectorAll('.main-nav__link');
-var navToggle = navMain.querySelector('.main-nav__toggle');
-var overlay = navMain.querySelector('.overlay');
+var navMainMode = document.querySelector('.main-nav__mode');
+var navLink = navMainMode.querySelectorAll('.main-nav__link');
+var navToggle = navMainMode.querySelector('.main-nav__toggle');
 
 function hideMenu() {
   navToggle.setAttribute('aria-label', 'Закрыть меню');
-  navMain.classList.remove('main-nav--opened');
-  navMain.classList.add('main-nav--closed');
-  overlay.classList.remove('overlay--show');
+  navMainMode.classList.remove('main-nav__mode--opened');
+  navMainMode.classList.add('main-nav__mode--closed');
   document.body.classList.remove('page-no-scroll');
 }
 
@@ -49,14 +48,6 @@ function onNavLinkClick() {
       hideMenu();
     });
   }
-}
-
-function closeOnOverlay() {
-  overlay.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    hideMenu();
-    document.removeEventListener('click', closeOnOverlay);
-  });
 }
 
 function closeOnEsc(evt) {
@@ -69,21 +60,19 @@ function closeOnEsc(evt) {
 
 function showMenu() {
   navToggle.setAttribute('aria-label', 'Открыть меню');
-  navMain.classList.remove('main-nav--closed');
-  navMain.classList.add('main-nav--opened');
-  navToggle.classList.add('main-nav__animation-down');
-  overlay.classList.add('overlay--show');
+  navMainMode.classList.remove('main-nav__mode--closed');
+  navMainMode.classList.add('main-nav__mode--opened');
   document.body.classList.add('page-no-scroll');
 
-  document.addEventListener('click', closeOnOverlay);
   document.addEventListener('keydown', closeOnEsc);
 }
 
 function onNavToggleClick() {
   navMain.classList.remove('main-nav--nojs');
+  navMainMode.classList.remove('main-nav__mode--nojs');
 
   navToggle.addEventListener('click', function () {
-    if (navMain.classList.contains('main-nav--closed')) {
+    if (navMainMode.classList.contains('main-nav__mode--closed')) {
       showMenu();
     } else {
       hideMenu();
